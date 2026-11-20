@@ -1,0 +1,103 @@
+/* =====================================================
+   Sezioni collassabili (<details>/<summary>)
+   ===================================================== */
+
+.collapsible {
+    overflow: hidden;
+
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+}
+
+.collapsible + .collapsible {
+    margin-top: var(--space-3);
+}
+
+.collapsible > summary {
+    min-height: var(--size-summary);
+    padding: 0 var(--space-4);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    list-style: none;
+    cursor: pointer;
+    user-select: none;
+
+    color: var(--color-text);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-bold);
+    line-height: var(--line-height-tight);
+    letter-spacing: var(--letter-spacing-caps);
+    text-transform: uppercase;
+
+    transition: background var(--duration-fast) ease;
+}
+
+/* .collapsible ha overflow:hidden: anello interno per non essere tagliato */
+.collapsible > summary:focus-visible {
+    outline-offset: -2px;
+    border-radius: var(--radius-lg);
+}
+
+.collapsible > summary::-webkit-details-marker {
+    display: none;
+}
+
+/* Freccia decorativa: testo alternativo vuoto → non letta dagli screen reader */
+.collapsible > summary::after {
+    content: "›";
+    content: "›" / "";
+
+    width: 22px;
+    height: 22px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: var(--radius-sm);
+
+    color: var(--color-text-muted);
+    font-size: var(--font-size-lg);
+    line-height: 1;
+
+    transition: transform var(--duration-fast) ease,
+                background var(--duration-fast) ease;
+}
+
+.collapsible > summary:hover {
+    background: var(--color-surface-hover);
+}
+
+.collapsible > summary:hover::after {
+    background: var(--color-control);
+    color: var(--color-text);
+}
+
+.collapsible[open] > summary {
+    border-bottom: 1px solid var(--color-border);
+}
+
+.collapsible[open] > summary::after {
+    transform: rotate(90deg);
+    color: var(--color-accent-strong);
+}
+
+.collapsible-content {
+    padding: var(--space-3) var(--space-4) var(--space-4);
+    animation: collapse-open var(--duration-fast) ease;
+}
+
+@keyframes collapse-open {
+    from {
+        opacity: 0;
+        transform: translateY(-3px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

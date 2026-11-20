@@ -4,12 +4,18 @@
   "version": "1.0.0",
   "description": "Implementa nuove funzioni in JSM",
   "host_permissions": ["https://*.atlassian.net/*"],
-  "permissions": ["activeTab", "scripting","storage"],
+  "permissions": ["activeTab", "scripting", "storage"],
   "content_scripts": [
     {
       "matches": ["https://*.atlassian.net/*"],
-      "js": ["content.js"],
+      "js": ["src/content/loader.js"],
       "run_at": "document_idle"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["src/content/*.js", "src/shared/*.js"],
+      "matches": ["https://*.atlassian.net/*"]
     }
   ],
   "icons": {
@@ -18,7 +24,7 @@
     "128": "assets/icons/favicon.png"
   },
   "action": {
-    "default_popup": "popup.html",
+    "default_popup": "src/popup/popup.html",
     "default_icon": {
       "16": "assets/icons/favicon.png",
       "48": "assets/icons/favicon.png",

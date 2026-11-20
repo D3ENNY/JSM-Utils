@@ -1,0 +1,72 @@
+/* =====================================================
+   Layout: contenitore, header, sezioni
+   ===================================================== */
+
+.popup {
+    padding: var(--space-5);
+}
+
+
+/* ---------------- Header ---------------- */
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: var(--space-5);
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+}
+
+.logo {
+    width: var(--size-logo);
+    height: var(--size-logo);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: var(--radius-md);
+    background: linear-gradient(135deg, #7c3aed, #4f46e5);   /* testo bianco ≥ 5.7:1 */
+    box-shadow: 0 4px 12px rgba(99, 102, 241, .35);
+
+    color: #ffffff;
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-heavy);
+    line-height: var(--line-height-tight);
+}
+
+.brand-title {
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-bold);
+    line-height: var(--line-height-tight);
+}
+
+.brand-subtitle {
+    margin-top: var(--space-1);
+    color: var(--color-text-muted);
+    font-size: var(--font-size-xs);
+    line-height: var(--line-height-tight);
+}
+
+
+/* ---------------- Sezioni ---------------- */
+
+.section {
+    margin-bottom: var(--space-5);
+}
+
+.section-title {
+    margin: 0 0 var(--space-3) var(--space-2);
+
+    color: var(--color-text-muted);
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-bold);
+    line-height: var(--line-height-tight);
+    letter-spacing: var(--letter-spacing-caps);
+    text-transform: uppercase;
+}

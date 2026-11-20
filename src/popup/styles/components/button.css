@@ -1,0 +1,29 @@
+/* =====================================================
+   Pulsante "Ripristina impostazioni"
+   ===================================================== */
+
+.reset-button {
+    width: 100%;
+    min-height: var(--size-control);
+    padding: var(--space-3) var(--space-4);
+
+    background: var(--color-surface);
+    border: 1px solid var(--color-border-control);
+    border-radius: var(--radius-sm);
+
+    color: var(--color-text);
+    font-size: var(--font-size-sm);
+    line-height: var(--line-height-tight);
+
+    cursor: pointer;
+
+    transition: background var(--duration-fast) ease;
+}
+
+.reset-button:hover {
+    background: var(--color-surface-hover);
+}
+
+.reset-icon {
+    margin-right: var(--space-2);
+}

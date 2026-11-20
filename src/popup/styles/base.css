@@ -1,0 +1,61 @@
+/* =====================================================
+   Base: reset, tipografia, focus, utility, preferenze
+   ===================================================== */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    width: var(--popup-width);
+    margin: 0;
+
+    background: var(--color-bg);
+    color: var(--color-text);
+
+    font-family: var(--font-family-base);
+    font-size: var(--font-size-md);
+    line-height: var(--line-height-base);
+}
+
+/* I controlli di form non ereditano il font di default */
+button,
+input {
+    font: inherit;
+    color: inherit;
+}
+
+h1,
+h2,
+p {
+    margin: 0;
+}
+
+/* Focus visibile e coerente per la navigazione da tastiera (2.4.7) */
+:focus-visible {
+    outline: 2px solid var(--color-focus);
+    outline-offset: 2px;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+    }
+}
