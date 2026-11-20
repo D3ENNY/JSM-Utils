@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "JSM-utils",
+  "version": "1.0.0",
+  "description": "Implementa nuove funzioni in JSM",
+  "host_permissions": ["https://*.atlassian.net/*"],
+  "permissions": ["activeTab", "scripting"],
+  "content_scripts": [
+    {
+      "matches": ["https://*.atlassian.net/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "icons": {
+    "16": "assets/icons/favicon.png",
+    "48": "assets/icons/favicon.png",
+    "128": "assets/icons/favicon.png"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "assets/icons/favicon.png",
+      "48": "assets/icons/favicon.png",
+      "128": "assets/icons/favicon.png"
+    }
+  }
+}

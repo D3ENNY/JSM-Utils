@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <title>JSM-utils</title>
+
+    <link rel="stylesheet" href="popup.css">
+</head>
+
+<body>
+
+<div class="popup">
+
+    <header class="header">
+
+        <div class="brand">
+
+            <div class="logo">
+                J
+            </div>
+
+            <div>
+                <div class="brand-title">
+                    JSM-utils
+                </div>
+
+                <div class="brand-subtitle">
+                    Personalizza Jira
+                </div>
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <section class="section">
+
+        <h2 class="section-title">
+            Funzionalità
+        </h2>
+
+        <div class="card">
+
+            <div class="feature">
+
+                <div class="feature-info">
+                    <span class="feature-name">
+                        Colori stati
+                    </span>
+
+                    <span class="feature-description">
+                        Colora automaticamente gli stati JSM
+                    </span>
+                </div>
+
+                <label class="switch">
+                    <input
+                        type="checkbox"
+                        id="enableStatusColors"
+                    >
+                    <span class="slider"></span>
+                </label>
+
+            </div>
+
+
+            <div class="feature">
+
+                <div class="feature-info">
+                    <span class="feature-name">
+                        Colori team
+                    </span>
+
+                    <span class="feature-description">
+                        Evidenzia le squadre nelle liste
+                    </span>
+                </div>
+
+                <label class="switch">
+                    <input
+                        type="checkbox"
+                        id="enableTeamColors"
+                    >
+                    <span class="slider"></span>
+                </label>
+
+            </div>
+
+
+            <div class="feature">
+
+                <div class="feature-info">
+                    <span class="feature-name">
+                        Marker summary
+                    </span>
+
+                    <span class="feature-description">
+                        Evidenzia [warning], [error] e [success]
+                    </span>
+                </div>
+
+                <label class="switch">
+                    <input
+                        type="checkbox"
+                        id="enableSummaryMarkers"
+                    >
+                    <span class="slider"></span>
+                </label>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="section">
+
+        <h2 class="section-title">
+            Colori stati
+        </h2>
+
+        <div class="card" id="statusColors">
+
+            <!-- popup.js inserirà qui gli stati -->
+
+        </div>
+
+    </section>
+
+
+    <section class="section">
+
+        <h2 class="section-title">
+            Colori team
+        </h2>
+
+        <div class="card" id="teamColors">
+
+            <!-- popup.js inserirà qui i team -->
+
+        </div>
+
+    </section>
+
+
+    <button
+        id="reset"
+        class="reset-button"
+    >
+        ↺ &nbsp; Ripristina impostazioni
+    </button>
+
+</div>
+
+<script src="popup.js"></script>
+
+</body>
+
+</html>
