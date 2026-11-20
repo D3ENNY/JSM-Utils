@@ -294,3 +294,143 @@ body {
 
     border-color: #4b515b;
 }
+
+/* =====================================================
+   SEZIONI COLLASSABILI
+   ===================================================== */
+
+.collapsible {
+    margin-bottom: 10px;
+
+    background: #181b20;
+
+    border: 1px solid #292d34;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    transition:
+        border-color 0.15s ease,
+        background 0.15s ease;
+}
+
+
+/* HEADER */
+
+.collapsible > summary {
+    min-height: 44px;
+
+    padding: 0 13px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    cursor: pointer;
+
+    list-style: none;
+
+    user-select: none;
+
+    color: #e8eaed;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+
+    transition:
+        background 0.15s ease,
+        color 0.15s ease;
+}
+
+
+/* Rimuove la freccia standard */
+
+.collapsible > summary::-webkit-details-marker {
+    display: none;
+}
+
+
+/* Freccia personalizzata */
+
+.collapsible > summary::after {
+    content: "›";
+
+    width: 22px;
+    height: 22px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 5px;
+
+    color: #8b9099;
+
+    font-size: 18px;
+    line-height: 1;
+
+    transition:
+        transform 0.18s ease,
+        background 0.15s ease;
+}
+
+
+/* Hover */
+
+.collapsible > summary:hover {
+    background: #20242a;
+
+    color: #ffffff;
+}
+
+.collapsible > summary:hover::after {
+    background: #292e35;
+    color: #ffffff;
+}
+
+
+/* Quando è aperto */
+
+.collapsible[open] > summary {
+    border-bottom: 1px solid #292d34;
+}
+
+
+/* Ruota la freccia */
+
+.collapsible[open] > summary::after {
+    transform: rotate(90deg);
+
+    color: #a78bfa;
+}
+
+
+/* CONTENUTO */
+
+.collapsible-content {
+    padding: 8px 12px 12px;
+    overflow: visible;
+}
+
+
+/* Animazione visiva del contenuto */
+
+.collapsible-content {
+    animation: collapseOpen 0.15s ease;
+}
+
+@keyframes collapseOpen {
+    from {
+        opacity: 0;
+        transform: translateY(-3px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

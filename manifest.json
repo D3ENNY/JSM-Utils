@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "description": "Implementa nuove funzioni in JSM",
   "host_permissions": ["https://*.atlassian.net/*"],
-  "permissions": ["activeTab", "scripting"],
+  "permissions": ["activeTab", "scripting","storage"],
   "content_scripts": [
     {
       "matches": ["https://*.atlassian.net/*"],
