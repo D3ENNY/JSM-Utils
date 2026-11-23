@@ -47,7 +47,8 @@ export const DEFAULT_CONFIG = deepFreeze({
     teamColors: {
         "sistemistica":   "#74005511",
         "programmazione": "#13017511",
-        "helpdesk":       "#36014011"
+        "helpdesk":       "#36014011",
+        "cloud":          "#005a3611"
     },
 
     summaryMarkers: {

@@ -17,7 +17,7 @@
 
 ## Funzioni
 
-- Nella lista dei ticket, le righe vengono colorate in base al team assegnatario: Sistemistica, Programmazione o Helpdesk.
+- Nella lista dei ticket, le righe vengono colorate in base al team assegnatario: Sistemistica, Programmazione, Helpdesk o Cloud.
 - I riepiloghi contenenti `[Warning]`, `[Error]` o `[Success]` vengono sottolineati rispettivamente in arancione, rosso o verde.
 
 ---
